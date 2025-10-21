@@ -1,0 +1,100 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+body {
+  background-color: #fff;
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  overflow: hidden;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.fact-container {
+  border: 10px dashed #ff9f43;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 20px;
+  background-color: #feca57;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+@keyframes emoji-fly {
+  0% {
+    transform: translate(var(--start-x), var(--start-y)) scale(var(--scale)) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(var(--x1), var(--y1)) scale(var(--scale)) rotate(var(--r1));
+  }
+  50% {
+    transform: translate(var(--x2), var(--y2)) scale(var(--scale)) rotate(var(--r2));
+  }
+  75% {
+    transform: translate(var(--x3), var(--y3)) scale(var(--scale)) rotate(var(--r3));
+  }
+  100% {
+    transform: translate(var(--x4), var(--y4)) scale(var(--scale)) rotate(var(--r4));
+    opacity: 1;
+  }
+}
+
+.fact-button {
+  background-color: #ff4757;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  font-size: 2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.fact-button:hover {
+  transform: scale(1.1);
+}
+
+.fact-display {
+  margin-top: 40px;
+  padding: 20px;
+  max-width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.fact-text {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 2.5rem;
+  color: #5758BB;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .fact-button {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+  }
+
+  .fact-text {
+    font-size: 1.8rem;
+  }
+}
