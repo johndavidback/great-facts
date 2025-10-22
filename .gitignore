@@ -101,8 +101,6 @@ storybook-static/
 # VuePress
 .vuepress/dist/
 
-# Hexo
-public/
 
 # Serverless
 .serverless/
