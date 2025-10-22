@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
 body {
   background-color: #fff;
@@ -74,6 +75,29 @@ body {
   font-size: 2.5rem;
   color: #5758BB;
   animation: fadeIn 0.5s ease-in-out;
+}
+
+.copied-message {
+  position: absolute;
+  background-color: #28a745;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  font-family: 'Bangers', cursive;
+  animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
 }
 
 @keyframes fadeIn {
